@@ -1,0 +1,13 @@
+
+h1{
+	text-align: center;
+}
+
+
+.axis { font: 14px sans-serif; }
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 2px;
+}

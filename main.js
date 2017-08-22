@@ -57,7 +57,7 @@ d3.json("https://data.cityofchicago.org/resource/77jv-5zb8.json?$where=measureme
       .attr("class", "axis")
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(x)
-              .tickFormat(d3.timeFormat("%H:%M:%S")))
+              .tickFormat(d3.timeFormat("%H:%M")))
       .selectAll("text")	
         .style("text-anchor", "end")
         .attr("dx", "-.8em")
@@ -68,5 +68,26 @@ d3.json("https://data.cityofchicago.org/resource/77jv-5zb8.json?$where=measureme
   svg.append("g")
       .attr("class", "axis")
       .call(d3.axisLeft(y));
+
+    // text label for the x axis
+  svg.append("text")             
+      .attr("transform",
+            "translate(" + (width/2) + " ," + 
+                           (height + margin.top + 50) + ")")
+      .attr("class", "xylabels")
+      .style("text-anchor", "middle")
+      .text("Time");
+
+  // text label for the y axis
+  svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 0 - margin.left)
+      .attr("x",0 - (height / 2))
+      .attr("dy", "1em")
+      .attr("class", "xylabels")
+      .style("text-anchor", "middle")
+      .text("Meters Per Second");      
+
+
 
 });

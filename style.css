@@ -1,13 +1,30 @@
 
-h1{
-	text-align: center;
+body{
+	background-color: #f9f9f9;
 }
 
+h1{
+	text-align: center;
+	color: #0045ff;
+}
 
-.axis { font: 14px sans-serif; }
+h1:hover{color:#FF0000;}
+
+
+.axis { font: 16px sans-serif; }
+
+
+.axis:hover{stroke:#FF0000;}
+
+.xylabels:hover{stroke:#FF0000;}
+
 
 .line {
   fill: none;
   stroke: steelblue;
   stroke-width: 2px;
+}
+
+.line:hover{
+	stroke:#FF0000;
 }
